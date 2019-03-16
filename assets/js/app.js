@@ -55,7 +55,8 @@ function testFunction(value) {
 
 function insertIntoResult(string) {
     var resultBody = '#result-body';
-    $(resultBody).text(string);
+    result = string.replace('<table>','<table class="table">');
+    $(resultBody).html(result);
 }
 
 function makeRequest(token) {
